@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Mistress Brasil - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: #326A8D;
+            color: #8D323C;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+
+        .site-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 900px;
+            gap: 20px;
+        }
+        header.sidebar {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+
+        .banner-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .poster-img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px 4px 0 0;
+            display: block;
+        }
+
+
+        h1.title {
+            background-color: #436C82;
+            color: #FFFFFF;
+            font-size: 15px;
+            text-align: center;
+            padding: 8px;
+            width: 100%;
+            border-radius: 0 0 8px 8px;
+        }
+
+
+        .welcome-text {
+            color: #C0D2DC;
+            font-size: 11px;
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+
+        .newsletter-section h2 {
+            color: #8D323C;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+
+        .newsletter-form {
+            display: flex;
+            gap: 8px;
+        }
+
+
+        .newsletter-form input[type="email"] {
+            background-color: #FFFFFF;
+            border: none;
+            padding: 8px;
+            border-radius: 6px;
+            flex: 1;
+            font-size: 11px;
+        }
+
+
+        .newsletter-form input[type="submit"] {
+            background-color: #B6C6CF;
+            border: none;
+            color: #8D323C;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+
+        .search-box input {
+            width: 100%;
+            background-color: #FFFFFF;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            outline: none;
+        }
+
+
+        .search-box input::placeholder {
+            color: #8D323C;
+            font-weight: bold;
+        }
+        .archives-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .archives-title {
+            color: #8D323C;
+            font-weight: bold;
+            font-size: 14px;
+            border-bottom: 2px solid #8D323C;
+            padding-bottom: 3px;
+            margin-bottom: 5px;
+        }
+
+
+        .archives-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .archives-list li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+
+        .archives-list a {
+            display: block;
+            padding: 6px 0;
+            color: #8D323C;
+            font-weight: bold;
+            font-size: 11px;
+            text-decoration: none;
+            text-align: center;
+        }
+        main.main-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 20px;
+        }
+
+
+       
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            background-color: #FFFFFF;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+
+        .navbar li {
+            flex: 1;
+            text-align: center;
+            border-right: 1px solid #326A8D;
+        }
+
+
+        .navbar li:last-child {
+            border-right: none;
+        }
+
+
+        .navbar a {
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: #8D323C;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+
+
+
+.posts-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .post-card {
+            background-color: #274D65;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .post-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .post-title-box {
+            background-color: #FFFFFF;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+
+        .post-title-box h2 {
+            color: #326A8D;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+
+        .post-body-box {
+            padding: 12px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        .post-body-box p {
+            color: #E2ECEF;
+            font-size: 10px;
+            line-height: 1.4;
+        }
+
+
+        .read-more-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+
+        .btn-read-more {
+            background-color: #B6C6CF;
+            color: #8D323C;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 10px;
+            padding: 5px 12px;
+            border-radius: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+
+
+    <div class="site-container">
+   
+   
+        <header class="sidebar">
+            <div class="banner-box">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.cAfdROtc4M-RmgjOW7xLygHaFj?r=0&w=1600&h=1200&rs=1&pid=ImgDetMain" alt="Twilight Poster" class="poster-img">
+                <h1 class="title">TWILIGHT MISTRESS BRASIL</h1>
+            </div>
+           
+           
+            <p class="welcome-text">
+                Hey Mistress! Sejam muito bem-vindos ao meu, ao seu, ao nosso blog, o melhor blog de amantes da melhor série de livros do mundo! Aqui você vai ter espaço para poder compartilhar suas opiniões, curiosidades, notícias, memes E TUDO QUE VOCÊ QUISER! (Mantendo o respeito com os outros internautas e claro!). Sinta-se livre para explorar nosso site.
+            </p>
+
+
+
+
+
+
+            <div class="newsletter-section">
+                <h2>GOSTOU DO BLOG E QUER ACOMPANHAR CADA POST? ASSINE A NEWSLETTER!</h2>
+               
+                <form class="newsletter-form">
+                    <input type="email" placeholder="DIGITE SEU EMAIL" required>
+                    <input type="submit" value="ASSINAR">
+                </form>
+            </div>
+           
+           
+            <div class="search-box">
+                <input type="text" placeholder="PESQUISAR...">
+            </div>
+           
+           
+            <div class="archives-section">
+                <h3 class="archives-title">ARQUIVOS</h3>
+                <ul class="archives-list">
+                    <li><a href="#">JANEIRO DE 2012</a></li>
+                    <li><a href="#">DEZEMBRO DE 2011</a></li>
+                    <li><a href="#">NOVEMBRO DE 2011</a></li>
+                    <li><a href="#">OUTUBRO DE 2011</a></li>
+                    <li><a href="#">SETEMBRO DE 2011</a></li>
+                    <li><a href="#">AGOSTO DE 2011</a></li>
+                    <li><a href="#">JULHO DE 2011</a></li>
+                    <li><a href="#">JUNHO DE 2011</a></li>
+                    <li><a href="#">MAIO DE 2011</a></li>
+                    <li><a href="#">ABRIL DE 2011</a></li>
+                    <li><a href="#">MARÇO DE 2011</a></li>
+                    <li><a href="#">FEVEREIRO DE 2011</a></li>
+                    <li><a href="#">JANEIRO DE 2011</a></li>
+                    <li><a href="#">DEZEMBRO DE 2010</a></li>
+                    <li><a href="#">NOVEMBRO DE 2010</a></li>
+                </ul>
+            </div>
+        </header>
+       
+       
+       
+        <main class="main-content">
+       
+       
+       
+       
+       
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">NOTÍCIAS</a></li>
+                    <li><a href="#">REVIEWS</a></li>
+                    <li><a href="#">MEMES</a></li>
+                </ul>
+            </nav>
+           
+           
+            <section class="posts-feed">
+           
+           
+                <article class="post-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Twilight_cast_2009.jpg/800px-Twilight_cast_2009.jpg" alt="Elenco Twilight" class="post-img">
+                    <div class="post-title-box">
+                        <h2>QUANDO O AMOR DAS NOSSAS VIDAS SE VAI, OQUE FAZER? CREPÚSCULO ACABOU E ESTOU PASSANDO MAL KKKKCRYING</h2>
+                    </div>
+                    <div class="post-body-box">
+                        <p>Hey Twilighters! Meu Deus, quanto tempo não é? Aaaa. Quantos séculos kkkkkk. Ok, agora é papo sério. Vocês devem ter lido o título e ficado em desespero (espero, porque eu estou! Louca, também né?!, certo? Vamos ao post com calma então...</p>
+                        <div class="read-more-wrapper">
+                            <a href="#" class="btn-read-more">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </article>
+               
+               
+                <article class="post-card">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.cAfdROtc4M-RmgjOW7xLygHaFj?r=0&w=1600&h=1200&rs=1&pid=ImgDetMain" alt="Sandálias da Humildade" class="post-img">
+                    <div class="post-title-box">
+                        <h2>SANDÁLIAS DA HUMILDADE PARA O MEYER, JÁ!</h2>
+                    </div>
+                    <div class="post-body-box">
+                        <p>Talvez esse seja o post mais revoltante do nosso blog. Ele é TÃO00 revoltante que passou na fila de pelo menos três posts que estavam para vir. Porque sim, tínhamos a intenção de falar sobre Twilight, bem como postar o meme do 'meme cherife' que ainda nem fiz em nossa homenagem (VALEU CAROL!). Também tínhamos o post...</p>
+                        <div class="read-more-wrapper">
+                            <a href="#" class="btn-read-more">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- POST 3 -->
+                <article class="post-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Twilight_cast_2009.jpg/800px-Twilight_cast_2009.jpg" alt="Rip Stephenie Meyer" class="post-img">
+                    <div class="post-title-box">
+                        <h2>PAGARIA? PARA COMEMORAR OS 10 ANOS DA SAGA TWILIGHT, A MEYER LANÇOU MAIS UMA BOSTA DE LIVRO</h2>
+                    </div>
+                    <div class="post-body-box">
+                        <p>Twilighters, é com extremo pesar (e muita revolta) que venho ao blog anunciar que o fim do que deveria ser um momento especial para os fãs... os 10 anos da saga dos nossos vidas... foi usado para divulgar mais um romance falido da autorah 'A Química', mas um romance/suspense (provavelmente mal escrito) da meyer...</p>
+                        <div class="read-more-wrapper">
+                            <a href="#" class="btn-read-more">LEIA MAIS</a>
+                        </div>
+                    </div>
+                </article>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+</body>
+</html>
+
+
+
+
